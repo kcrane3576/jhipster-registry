@@ -6,15 +6,13 @@
 spring:
     application:
         name: jhipster-registry
-    profiles:
-        active: dev,native
+#    profiles:
+#        active: dev
     cloud:
         config:
             server:
                 git:
-                    uri: https://github.com/jhipster/jhipster-registry-sample-config
-                native:
-                    search-locations: file:./central-config
+                    uri: https://github.com/kcrane3576/registry-config.git
                 prefix: /config
                 bootstrap: true
             fail-fast: true
