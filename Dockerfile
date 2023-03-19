@@ -9,7 +9,7 @@ RUN \
     mv /code/target/*.war /jhipster-registry.war && \
     rm -Rf /code/ /root/.m2 /root/.cache /tmp/*
 
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jre-alpine@sha256:310cf1082fd86dc6a99d2d5c6b4039b4955194c824b4d52e6b18d1b356da82e6
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     SPRING_PROFILES_ACTIVE=prod,native \
     GIT_URI=https://github.com/jhipster/jhipster-registry/ \
