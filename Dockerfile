@@ -1,4 +1,4 @@
-FROM openjdk:8 as builder
+FROM openjdk:8@sha256:3af2ac94130765b73fc8f1b42ffc04f77996ed8210c297fcfa28ca880ff0a217 as builder
 ADD . /code/
 RUN \
     cd /code/ && \
