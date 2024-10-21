@@ -1,4 +1,4 @@
-FROM openjdk:8 as builder
+FROM openjdk:8@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8 as builder
 ADD . /code/
 RUN \
     cd /code/ && \
@@ -9,7 +9,7 @@ RUN \
     mv /code/target/*.war /jhipster-registry.war && \
     rm -Rf /code/ /root/.m2 /root/.cache /tmp/*
 
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jre-alpine@sha256:f362b165b870ef129cbe730f29065ff37399c0aa8bcab3e44b51c302938c9193
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     SPRING_PROFILES_ACTIVE=prod,native \
     GIT_URI=https://github.com/jhipster/jhipster-registry/ \
